@@ -14,6 +14,7 @@ router.beforeEach(function(to,from,next){
   console.log('from',from)
   console.log('next',next)
   if(isLogin){
+    document.title = 'wss:'+to.name
     next()
   }else{
     if(to.path === '/login'){
